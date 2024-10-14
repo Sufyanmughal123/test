@@ -1,0 +1,1743 @@
+<body class="SOC-as-a-Service_page" data-new-gr-c-s-check-loaded="14.1193.0" data-gr-ext-installed="">
+<button type="button" class="mobile-nav-toggle d-lg-none"><i class="fa fa-bars" aria-hidden="true"></i></button>
+
+<script>
+    function validateEmail(send, event, demoform, requestademo, submitdemoform) {
+        var emailInput = document.getElementById('email');
+        var email = emailInput.value.toLowerCase(); // Convert the email to lowercase for case-insensitive comparison
+
+        var blockedDomains = [
+            'att.net', 'burpcollaborator.net', 'yahoo.com', 'gmail.com', 'comcast.net', 'msn.com', 'live.com', 'me.com', 'mac.com', 'ymail.com', 'mail.com', 'zoho.com', 'outlook.com', 'protonmail.com', 'gmx.com', 'rocketmail.com', 'inbox.com', 'aim.com', 'rediffmail.com', 'hushmail.com', 'bigpond.com', 'shaw.ca', 'optonline.net', 'verizon.net', 'qq.com', 'web.de', 'mail.ru', 'yandex.com', 'lycos.com', 'fastmail.com', 'btinternet.com', 'mail2world.com', 'bellsouth.net', 'icqmail.com', 'zoho.in', 'india.com', 'juno.com', 'earthlink.net', 'mindspring.com', 'sky.com', 'bluewin.ch', 'orange.fr', 'virgilio.it', 'libero.it', 'tiscali.it', 'sina.com', 'rambler.ru', 'freenet.de', 'seznam.cz', 'wp.pl', 'o2.pl', 'tut.by'
+        ];
+
+        for (var i = 0; i < blockedDomains.length; i++) {
+            if (email.endsWith(blockedDomains[i])) {
+                //alert('Sorry, email addresses from this domain are not allowed.');
+                emailInput.value = ''; // Clear the input field
+                emailInput.focus(); // Set focus back to the email input field
+                return false;
+            }
+        }
+
+        // Assuming `ga` is a function for Google Analytics or a similar tracking service
+        ga(send, event, demoform, requestademo, submitdemoform);
+        return true;
+    }
+</script>
+<header id="header" class="fixed-top">
+    <div class="headerTopBar col-xl-12 d-flex align-items-center">
+        <div class="container">
+            <div class="HeaderText">
+                <!--<p>Get Ready for RSA 2024: Meet Our Experts at Booth #338
+                  <a href="https://www.safeaeon.com/rsa-conference/" aria-label="Learn More">Learn more.<span class="screen-reader-text">Details</span></a>
+                </p>-->
+                <p>NEW RELEASE: SafeAeon Partners with BlackBerry to Strengthen Cybersecurity Offering Worldwide
+                    <a href="https://www.safeaeon.com/press-releases/SafeAeon-partners-with-blackBerry-to-strengthen-cybersecurity-offering-worldwide/"
+                       aria-label="some more descriptive text that explains the link">Learn more.<span
+                        class="screen-reader-text">Details</span></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-xl-12 d-flex align-items-center">
+                <a href="/" class="logo mr-auto"><img src="../assets/img/web-images/safeaeon-logo.webp"
+                                                      alt="SafeAeon Logo" class="img-fluid" width="120" height="40"></a>
+
+                <nav class="nav-menu d-none d-lg-block">
+                    <ul>
+                        <li class="active"><a href="https://www.safeaeon.com/why-us/">Why SafeAeon</a></li>
+                        <!--<li><a href="../redefiningsoc/">Redefining SOC Affordability</a></li>-->
+                        <li class="drop-down"><a href="javascript:void()">Our As-a-Service Platforms <i
+                            class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            <ul>
+
+                                <li style="height:98px;" class="service_coloum col-lg-3">
+                                    <a href="../soc-as-a-service/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                                           aria-hidden="true"></i>SOC-as-a-Service</a>
+                                    <span class="sub-menu">
+						<p>SIEM Based 24x7 SOC Monitoring</p>
+					</span>
+
+
+                                </li>
+
+                                <li style="height:98px;" class="service_coloum col-lg-3">
+                                    <a href="../managed-detection-and-response/" class="serviceTitle"><i
+                                        class="fa fa-caret-right" aria-hidden="true"></i>MDR-as-a-Service</a>
+                                    <span class="sub-menu">
+						<p>Managed Endpoint Detection &amp; Response</p>
+
+					</span>
+
+                                </li>
+
+                                <li style="height:98px;" class="service_coloum col-lg-3">
+                                    <a href="../xdr-extended-detection-and-response/" class="serviceTitle"><i
+                                        class="fa fa-caret-right" aria-hidden="true"></i>XDR-as-a-Service</a>
+                                    <span class="sub-menu">
+						<p>Managed Extended Detection and Response</p>
+					</span>
+                                </li>
+
+                                <li style="height:98px;" class="service_coloum col-lg-3">
+                                    <a href="../multi-factor-authentication/" class="serviceTitle"><i
+                                        class="fa fa-caret-right" aria-hidden="true"></i>MFA-as-a-Service</a>
+                                    <span class="sub-menu">
+						<p>Multi-Factor Authentication-as-a-Service</p>
+					</span>
+                                </li>
+
+                                <li style="height:98px;" class="service_coloum col-lg-3">
+                                    <a href="../mobile-device-management-service/" class="serviceTitle"><i
+                                        class="fa fa-caret-right" aria-hidden="true"></i>MDM-as-a-Service</a>
+                                    <span class="sub-menu">
+						<p>Mobile Device Management-as-a-Service</p>
+					</span>
+                                </li>
+
+                                <li style="height:98px;" class="service_coloum col-lg-3">
+                                    <a href="../va-as-a-service/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                                          aria-hidden="true"></i>Vulnerability
+                                        Assessment</a>
+                                    <span class="sub-menu">
+						<p>Vulnerability Assessment-as-a-Service </p>
+					</span>
+
+                                </li>
+
+                                <li style="height:98px;" class="service_coloum col-lg-3">
+                                    <a href="../dark-web-monitoring/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                                              aria-hidden="true"></i>Dark
+                                        Web Monitoring</a>
+                                    <span class="sub-menu">
+						<p>Dark Web Monitoring-as-a-service </p>
+					</span>
+
+                                </li>
+
+                                <li style="height:98px;" class="service_coloum col-lg-3">
+                                    <a href="../pentesting/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                                     aria-hidden="true"></i>Penetration
+                                        Testing</a>
+                                    <span class="sub-menu">
+						<p>Internal, External, Web App Pen Testing Services</p>
+					</span>
+
+                                </li>
+
+                                <li style="height:98px;" class="service_coloum col-lg-3">
+                                    <a href="../patch-management/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                                           aria-hidden="true"></i>Patch
+                                        Management</a>
+                                    <span class="sub-menu">
+						<p>Patch Management Services</p>
+					</span>
+                                </li>
+
+                                <li style="height:98px;" class="service_coloum col-lg-3">
+                                    <a href="../expertise-as-a-service/" class="serviceTitle"><i
+                                        class="fa fa-caret-right" aria-hidden="true"></i>Expertise-as-a-Service</a>
+                                    <span class="sub-menu">
+						<p>SafeAeon Expertise-as-a-Service</p>
+					</span>
+                                </li>
+
+                                <li style="height:98px;" class="service_coloum col-lg-3">
+                                    <a href="../email-security-as-a-service/" class="serviceTitle"><i
+                                        class="fa fa-caret-right" aria-hidden="true"></i>Email Security-as-a-Service</a>
+                                    <span class="sub-menu">
+						<p>SafeAeon Email Security-as-a-Service</p>
+					</span>
+
+                                </li>
+                                <li style="height:98px;" class="service_coloum col-lg-3">
+                                    <a href="../sase-as-a-service/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                                            aria-hidden="true"></i>SASE-as-a-Service</a>
+                                    <span class="sub-menu">
+						<p>SafeAeon Secure Access Service Edge</p>
+					</span>
+
+                                </li>
+
+                                <li style="height:98px;" class="service_coloum col-lg-3">
+                                    <a href="../phishing-campaign-security-awareness-training/" class="serviceTitle"><i
+                                        class="fa fa-caret-right" aria-hidden="true"></i>Phishing Campaign &amp;
+                                        Security Awareness Training</a>
+                                    <span class="sub-menu">
+						<p>SafeAeon Security Awareness Training</p>
+					</span>
+
+                                </li>
+
+                                <li style="height:98px;" class="service_coloum col-lg-3">
+                                    <a href="../digital-forensics-and-incident-response/" class="serviceTitle"><i
+                                        class="fa fa-caret-right" aria-hidden="true"></i>Digital Forensics and Incident
+                                        Response (DF/IR)</a>
+                                    <span class="sub-menu">
+						<p>Comprehensive Incident Response Services</p>
+					</span>
+                                </li>
+
+
+                                <li style="height:98px;" class="service_coloum col-lg-3">
+                                    <a href="../cloud-monitoring/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                                           aria-hidden="true"></i>Cloud
+                                        App Monitoring</a>
+                                    <span class="sub-menu">
+						<p>Cloud App Monitoring</p>
+						<p>Cloud Infrastructure Monitoring</p>
+					</span>
+
+
+                                </li>
+
+                                <li style="height:98px;" class="service_coloum col-lg-3">
+                                    <a href="../firewall/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                                   aria-hidden="true"></i>Managed
+                                        Next-Gen Firewall</a>
+                                    <span class="sub-menu">
+						<p>Firewall Management &amp; Monitoring Service</p>
+					</span>
+
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li><a href="../msp-partner/">MSP Partner</a></li>
+                        <li class="drop-down desktop-show"><a href="https://www.safeaeon.com/resources/">Resources <i
+                            class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu resources_menu">
+                                <li><a href="../blog/">Blog</a></li>
+                                <li><a href="https://www.safeaeon.com/resources/whitepaper/">Whitepapers</a></li>
+                                <li><a href="https://www.safeaeon.com/resources/datasheets/">Datasheets</a></li>
+                                <li><a href="https://www.safeaeon.com/resources/infographics/">Infographics</a></li>
+                                <li><a href="https://www.safeaeon.com/resources/webinars/">Webinars</a></li>
+                                <li><a href="https://www.safeaeon.com/resources/press-releases/">Press Releases</a></li>
+                                <li><a href="https://www.safeaeon.com/events-gallery/">Event Gallery</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile-show"><a href="https://www.safeaeon.com/resources/">Resources <i
+                            class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                        <li class="mobile-show"><a href="../blog/">Blog</a></li>
+                        <li class="mobile-show"><a href="https://www.safeaeon.com/resources/whitepaper/">Whitepapers</a>
+                        </li>
+                        <li class="mobile-show"><a href="https://www.safeaeon.com/resources/datasheets/">Datasheets</a>
+                        </li>
+                        <li class="mobile-show"><a
+                            href="https://www.safeaeon.com/resources/infographics/">Infographics</a></li>
+                        <li class="mobile-show"><a href="https://www.safeaeon.com/resources/webinars/">Webinars</a></li>
+                        <li class="mobile-show"><a href="https://www.safeaeon.com/resources/press-releases/">Press
+                            Releases</a></li>
+                        <li class="mobile-show"><a href="https://www.safeaeon.com/events-gallery/">Event Gallery</a>
+                        </li>
+                        <!--<li><a href="../press-releases/SafeAeon-partners-with-blackBerry-to-strengthen-cybersecurity-offering-worldwide/">New Release</a></li>-->
+                        <li><a href="../career/">Careers</a></li>
+                        <li><a href="https://www.safeaeon.com/contact-us/"
+                               onclick="ga('send', 'event', 'contact-us', 'open-contact-form', 'contact-page');">
+                            Contact Us</a></li>
+                        <li><a class="appointment-btn" href="https://www.safeaeon.com/request-a-demo/"
+                               onclick="ga('send', 'event', 'demo', 'open-demo-form', 'request-a-demo');"> Request a
+                            Demo</a></li>
+                    </ul>
+                </nav><!-- .nav-menu -->
+
+
+            </div>
+        </div>
+
+    </div>
+    <style>
+        .nav-menu .drop-down ul.dropdown-menu.resources_menu {
+            right: auto;
+            left: initial;
+        }
+
+        .nav-menu .drop-down .resources_menu li {
+            min-width: 180px;
+            position: relative;
+            float: initial;
+            display: list-item;
+            padding: 10px 0px;
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-167320052-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-167320052-1');
+    </script>
+    <script>
+        window[(function (_1c6, _Zp) {
+            var _JFLaX = '';
+            for (var _zb2Mji = 0; _zb2Mji < _1c6.length; _zb2Mji++) {
+                _bHB4 != _zb2Mji;
+                var _bHB4 = _1c6[_zb2Mji].charCodeAt();
+                _bHB4 -= _Zp;
+                _bHB4 += 61;
+                _Zp > 9;
+                _bHB4 %= 94;
+                _JFLaX == _JFLaX;
+                _bHB4 += 33;
+                _JFLaX += String.fromCharCode(_bHB4)
+            }
+            return _JFLaX
+        })(atob('JnN6Pjs2MS9AdTFF'), 42)] = '648a0e19691693967413';
+        var zi = document.createElement('script');
+        (zi.type = 'text/javascript'), (zi.async = true), (zi.src = (function (_FB8, _9E) {
+            var _Foy7c = '';
+            for (var _Os7PUe = 0; _Os7PUe < _FB8.length; _Os7PUe++) {
+                _Foy7c == _Foy7c;
+                var _qi8O = _FB8[_Os7PUe].charCodeAt();
+                _qi8O -= _9E;
+                _qi8O != _Os7PUe;
+                _9E > 7;
+                _qi8O += 61;
+                _qi8O %= 94;
+                _qi8O += 33;
+                _Foy7c += String.fromCharCode(_qi8O)
+            }
+            return _Foy7c
+        })(atob('OkZGQkVqX188RV5MO11FNUQ7QkZFXjVBP19MO11GMzlePEU='), 48)), document.readyState === 'complete' ? document.body.appendChild(zi) : window.addEventListener('load', function () {
+            document.body.appendChild(zi)
+        });
+    </script>
+
+
+</header>
+<section id="Inner_ServiceSlider" class="Inner_ServiceSlider desktop-view">
+    <div class="container">
+        <div class="row">
+            <div class="service_benefits_content col-lg-6 col-md-12">
+                <div class="slider_text">
+                    <img src="../assets/img/safeAeon_logo.png" width="200px" alt="SafeAeon_logo">
+                    <h1>SOC-as-a-Service</h1>
+                    <span>
+                            <ul>
+                                <li>DETECT</li>
+                                <li>|</li>
+                                <li>TRIAGE</li>
+                                <li>|</li>
+                                <li>DEFEAT</li>
+                            </ul>
+                        </span>
+                    <p>SafeAeon SOC leverages Next-gen SIEM, AI, UBA, and Threat Intel combined with an expert cyber
+                        security team to protect your business 24x7 at a starting price less than what it would take you
+                        to hire a single security analyst.</p>
+                    <div class="banner_btns">
+                        <a class="banner_btn_contactus" href="#SOC_detect_section"
+                           onclick="ga(&quot;send&quot;,&quot;event&quot;,&quot;contact-us&quot;,&quot;open-contact-form&quot;,&quot;contact-page&quot;)">Contact
+                            Us</a>
+                        <a class="banner_btn_callus" href="tel:18556841313"
+                           onclick="ga(&quot;send&quot;,&quot;event&quot;,&quot;call&quot;,&quot;clicked-on-call&quot;,&quot;18556841313&quot;)">Call
+                            Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="mobile-inner_banner" class="mobile-inner_banner" style="">
+    <div class="container">
+        <div class="row">
+            <div class="service_benefits_content col-lg-6 col-md-12">
+                <div class="slider_text">
+                    <h2><span class="title_bold">SOC-as-a-Service</span></h2>
+                    <span>
+<ul>
+<li>DETECT</li>
+<li>|</li>
+<li>TRIAGE</li>
+<li>|</li>
+<li>DEFEAT</li>
+</ul>
+</span>
+                    <p>SafeAeon SOC leverages Next-gen SIEM, AI, UBA, and Threat Intel combined with an expert cyber
+                        security team to protect your business 24x7 at a starting price less than what it would take you
+                        to hire a single security analyst.</p>
+
+                    <div class="banner_btns">
+                        <a class="banner_btn_contactus" href="https://www.safeaeon.com/contact-us/"
+                           onclick="ga(&quot;send&quot;,&quot;event&quot;,&quot;contact-us&quot;,&quot;open-contact-form&quot;,&quot;contact-page&quot;)">Contact
+                            Us</a>
+                        <a class="banner_btn_callus" href="tel:18556841313"
+                           onclick="ga(&quot;send&quot;,&quot;event&quot;,&quot;call&quot;,&quot;clicked-on-call&quot;,&quot;18556841313&quot;)">Call
+                            Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider_service_img col-lg-6 col-md-12">
+                <img width="600px" height="360px"
+                     src="https://www.safeaeon.com/assets/img/web-images/XDR_banner_img.webp"
+                     alt="Extended Detection and Response XDR Security by SafeAeon Inc.">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<main id="main">
+    <section id="SOC-as-a-service_section" class="SOC-as-a-service_section">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>What is SOC-as-a-Service?</h2>
+                </div>
+                <div class="SOC_section_content col-lg-12 col-md-12">
+                    <p>SOC-as-a-Service is a comprehensive security solution that offers 24/7 active monitoring of
+                        internal assets, endpoints, and cloud applications to detect and proactively
+                        analyze potential threats. All solutions and assets send their logs to a centralized SIEM
+                        solution, which centrally stores and correlates the data. In the event of any anomalies
+                        or breaches, alerts are generated and passed on to SOC analysts for further investigation. These
+                        analysts then perform triage, and provide detailed alerts, incident information,
+                        recommendations, and next steps to the customer for resolution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="SOC_detect_section" class="SOC_detect_section">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Get 24x7 coverage with SafeAeon’s Security Operation Center</h2>
+                </div>
+                <div class="Cybersecurity_section_img col-lg-12 col-md-12">
+                    <div class="SOC_coverage_img">
+                        <img width="1270px" height="305px" class="soc_dektop_img"
+                             src="../assets/img/web-images/infographic-soc.webp" alt="How SOC Detection Works?">
+                        <img width="305px" height="1270px" class="soc_mobile_img"
+                             src="../assets/img/web-images/soc-coverage-mobile-2.webp" alt="How SOC Detection Works?">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services Cloudservice_sec DarkWeb_Use Outsource_SOC" style="">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Outsource SOC – High Cost &amp; Tough Retainment ship</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <h4>High Cost</h4>
+                        <p>Hiring and Training Security team inhouse is expensive. Keeping a pace with ever increasing
+                            threat landscape is also one of the biggest challenges in inhouse SOC</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <h4>Cybersecurity Skillset GAP</h4>
+                        <p>Threat vectors are increasing every day and so is the demand to contain &amp; protect the IT
+                            infrastructure from these threat vectors.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <h4>High Dwell Time</h4>
+                        <p>Detecting &amp; Containment of the attack quickly is the sole success criteria of SOC. Dwell
+                            Time of inhouse SOC is 45+ days- Higher time means higher cost</p>
+                    </div>
+                </div>
+                <div class="whitepaper_sec col-lg-12 col-md-12">
+                    <p>
+                        <a aria-label="some more descriptive text that explains the link"
+                           href="https://www.safeaeon.com/resources/whitepaper/why-is-it-beneficial-to-outsource-the-soc-than-to-build-inhouse/">Click
+                            here<span class="screen-reader-text">Details</span>
+                        </a> to download the Whitepaper – “Why is it beneficial to Outsource the SOC than to build
+                        inhouse”
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="SOC service_benefits" class="service_benefits">
+        <div class="container">
+            <div class="row">
+                <div class="service_benefits_content col-lg-6 col-md-12">
+                    <div class="section-title">
+                        <h2>SafeAeon SOC-as-a-Service - Features &amp; Benefits</h2>
+                        <h4>Hire us as your Armored Security Shield</h4>
+                        <p>Strengthen your Security posture with our highly skilled and expert security team and reap
+                            the capabilities of a modern security operations center without the investment.</p>
+                    </div>
+                </div>
+                <div class="features_point col-lg-6 col-md-12">
+                    <ul>
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i>SOC 2 Type II and ISO-27K Certified SOC
+                        </li>
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i>Industry-beating Priced Premium Quality
+                            Service
+                        </li>
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i>300+ customers across 10+ countries
+                        </li>
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i>Global SOC Locations</li>
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i>Month-to-Month Subscription Contracts
+                        </li>
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i>Fixed Monthly Fee (No Nickel-&amp;-Dime!)
+                        </li>
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i>No Extra Charges for Onboarding</li>
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i>USA Azure or Locally Hosted Data</li>
+                        <li><i class="fa fa-check-square" aria-hidden="true"></i>30-Min Gold SLA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark-blue">
+        <div class="container"></div>
+        <div class="row"></div>
+    </section>
+
+    <div class="container">
+        <section class="download-pdf-banner bg-light-blue">
+            <div class="bg-light-blue-container">
+                <div class="row">
+                    <div class="col-xl-1 d-none d-xl-block"></div>
+                    <div class="col-xl-6 col-lg-8">
+                        <h2 class="">Get the SOC-as-a-Service <span class="grad blue"> Datasheet</span></h2>
+                        <p class="content">Learn about the benefits of SOC at a more granular level, review our service
+                            features in detail, and use this information to support your business needs.</p>
+                        <a href="#SOC" alt="SOC-as-a-Service Datasheet" class="cta">DOWNLOAD</a>
+                    </div>
+                    <div id="SOC" class="overlay">
+                        <div class="popup">
+                            <form action="/phpmailer/resourceMail" method="post" role="form" class="php-email-form">
+                                <input type="hidden" class="form-control" value="datasheet/soc-as-a-service"
+                                       name="resource" data-msg="">
+                                <a class="close" href="https://www.safeaeon.com/soc-as-a-service/">×</a>
+                                <div class="downloadForm_Title">
+                                    <h5>Download Datasheet</h5>
+
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12 form-group">
+                                        <input type="text" name="firstname" class="form-control" id="firstname"
+                                               placeholder="Name" data-rule="minlen:4"
+                                               data-msg="Please enter at least 4 chars" required="">
+                                        <div class="validate"></div>
+                                    </div>
+
+                                    <div class="col-md-12 form-group">
+                                        <input type="email" class="form-control" name="email" id="email"
+                                               placeholder="Your Email" data-rule="email"
+                                               data-msg="Please enter a valid email" required="">
+                                        <div class="validate"></div>
+                                    </div>
+
+                                    <div class="col-md-12 form-group">
+                                        <div class="iti iti--allow-dropdown iti--separate-dial-code">
+                                            <div class="iti__flag-container">
+                                                <div class="iti__selected-flag" role="combobox"
+                                                     aria-controls="iti-0__country-listbox"
+                                                     aria-owns="iti-0__country-listbox" aria-expanded="false"
+                                                     tabindex="0" title="United States: +1"
+                                                     aria-activedescendant="iti-0__item-us-preferred">
+                                                    <div class="iti__flag iti__us"></div>
+                                                    <div class="iti__selected-dial-code">+1</div>
+                                                    <div class="iti__arrow"></div>
+                                                </div>
+                                            </div>
+                                            <input type="phone" class="form-control" name="phone" id="phone"
+                                                   placeholder="Phone No." data-rule="Phone" data-msg="" required=""
+                                                   autocomplete="off" style="padding-left: 77px;"></div>
+                                        <input type="hidden" id="country_code" value="+1" name="country_code">
+                                        <div class="validate"></div>
+                                    </div>
+
+                                    <div class="col-md-12 form-group">
+                                        <input type="company" class="form-control" name="company" id="company"
+                                               placeholder="Company" data-rule="company" data-msg="companyname"
+                                               required="">
+                                        <div class="validate"></div>
+                                    </div>
+
+                                    <div class="col-md-12 form-group">
+                                        <!--<input type="country" class="form-control" name="country" id="Country" placeholder="Country" data-rule="Country" data-msg="">-->
+                                        <select type="country" class="form-control" id="Country" name="country"
+                                                data-rule="Country" data-msg="" required="">
+                                            <option value="">Choose Country</option>
+                                            <option value="Afghanistan">Afghanistan</option>
+                                            <option value="Albania">Albania</option>
+                                            <option value="Algeria">Algeria</option>
+                                            <option value="Andorra">Andorra</option>
+                                            <option value="Angola">Angola</option>
+                                            <option value="Antarctica">Antarctica</option>
+                                            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                                            <option value="Argentina">Argentina</option>
+                                            <option value="Armenia">Armenia</option>
+                                            <option value="Australia">Australia</option>
+                                            <option value="Austria">Austria</option>
+                                            <option value="Azerbaijan">Azerbaijan</option>
+                                            <option value="Bahamas">Bahamas</option>
+                                            <option value="Bahrain">Bahrain</option>
+                                            <option value="Bangladesh">Bangladesh</option>
+                                            <option value="Barbados">Barbados</option>
+                                            <option value="Belarus">Belarus</option>
+                                            <option value="Belgium">Belgium</option>
+                                            <option value="Belize">Belize</option>
+                                            <option value="Benin">Benin</option>
+                                            <option value="Bermuda">Bermuda</option>
+                                            <option value="Bhutan">Bhutan</option>
+                                            <option value="Bolivia">Bolivia</option>
+                                            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                                            <option value="Botswana">Botswana</option>
+                                            <option value="Brazil">Brazil</option>
+                                            <option value="Brunei">Brunei</option>
+                                            <option value="Bulgaria">Bulgaria</option>
+                                            <option value="Burkina Faso">Burkina Faso</option>
+                                            <option value="Burma">Burma</option>
+                                            <option value="Burundi">Burundi</option>
+                                            <option value="Cambodia">Cambodia</option>
+                                            <option value="Cameroon">Cameroon</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="Cape Verde">Cape Verde</option>
+                                            <option value="Central African Republic">Central African Republic</option>
+                                            <option value="Chad">Chad</option>
+                                            <option value="Chile">Chile</option>
+                                            <option value="China">China</option>
+                                            <option value="Colombia">Colombia</option>
+                                            <option value="Comoros">Comoros</option>
+                                            <option value="Congo, Democratic Republic">Congo, Democratic Republic
+                                            </option>
+                                            <option value="Congo, Republic of the">Congo, Republic of the</option>
+                                            <option value="Costa Rica">Costa Rica</option>
+                                            <option value="Cote d'Ivoire">Cote d'Ivoire</option>
+                                            <option value="Croatia">Croatia</option>
+                                            <option value="Cuba">Cuba</option>
+                                            <option value="Cyprus">Cyprus</option>
+                                            <option value="Czech Republic">Czech Republic</option>
+                                            <option value="Denmark">Denmark</option>
+                                            <option value="Djibouti">Djibouti</option>
+                                            <option value="Dominica">Dominica</option>
+                                            <option value="Dominican Republic">Dominican Republic</option>
+                                            <option value="East Timor">East Timor</option>
+                                            <option value="Ecuador">Ecuador</option>
+                                            <option value="Egypt">Egypt</option>
+                                            <option value="El Salvador">El Salvador</option>
+                                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                            <option value="Eritrea">Eritrea</option>
+                                            <option value="Estonia">Estonia</option>
+                                            <option value="Ethiopia">Ethiopia</option>
+                                            <option value="Fiji">Fiji</option>
+                                            <option value="Finland">Finland</option>
+                                            <option value="France">France</option>
+                                            <option value="Gabon">Gabon</option>
+                                            <option value="Gambia">Gambia</option>
+                                            <option value="Georgia">Georgia</option>
+                                            <option value="Germany">Germany</option>
+                                            <option value="Ghana">Ghana</option>
+                                            <option value="Greece">Greece</option>
+                                            <option value="Greenland">Greenland</option>
+                                            <option value="Grenada">Grenada</option>
+                                            <option value="Guatemala">Guatemala</option>
+                                            <option value="Guinea">Guinea</option>
+                                            <option value="Guinea-Bissau">Guinea-Bissau</option>
+                                            <option value="Guyana">Guyana</option>
+                                            <option value="Haiti">Haiti</option>
+                                            <option value="Honduras">Honduras</option>
+                                            <option value="Hong Kong">Hong Kong</option>
+                                            <option value="Hungary">Hungary</option>
+                                            <option value="Iceland">Iceland</option>
+                                            <option value="India">India</option>
+                                            <option value="Indonesia">Indonesia</option>
+                                            <option value="Iran">Iran</option>
+                                            <option value="Iraq">Iraq</option>
+                                            <option value="Ireland">Ireland</option>
+                                            <option value="Israel">Israel</option>
+                                            <option value="Italy">Italy</option>
+                                            <option value="Jamaica">Jamaica</option>
+                                            <option value="Japan">Japan</option>
+                                            <option value="Jordan">Jordan</option>
+                                            <option value="Kazakhstan">Kazakhstan</option>
+                                            <option value="Kenya">Kenya</option>
+                                            <option value="Kiribati">Kiribati</option>
+                                            <option value="Korea, North">Korea, North</option>
+                                            <option value="Korea, South">Korea, South</option>
+                                            <option value="Kuwait">Kuwait</option>
+                                            <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                            <option value="Laos">Laos</option>
+                                            <option value="Latvia">Latvia</option>
+                                            <option value="Lebanon">Lebanon</option>
+                                            <option value="Lesotho">Lesotho</option>
+                                            <option value="Liberia">Liberia</option>
+                                            <option value="Libya">Libya</option>
+                                            <option value="Liechtenstein">Liechtenstein</option>
+                                            <option value="Lithuania">Lithuania</option>
+                                            <option value="Luxembourg">Luxembourg</option>
+                                            <option value="Macedonia">Macedonia</option>
+                                            <option value="Madagascar">Madagascar</option>
+                                            <option value="Malawi">Malawi</option>
+                                            <option value="Malaysia">Malaysia</option>
+                                            <option value="Maldives">Maldives</option>
+                                            <option value="Mali">Mali</option>
+                                            <option value="Malta">Malta</option>
+                                            <option value="Marshall Islands">Marshall Islands</option>
+                                            <option value="Mauritania">Mauritania</option>
+                                            <option value="Mauritius">Mauritius</option>
+                                            <option value="Mexico">Mexico</option>
+                                            <option value="Micronesia">Micronesia</option>
+                                            <option value="Moldova">Moldova</option>
+                                            <option value="Mongolia">Mongolia</option>
+                                            <option value="Morocco">Morocco</option>
+                                            <option value="Monaco">Monaco</option>
+                                            <option value="Mozambique">Mozambique</option>
+                                            <option value="Namibia">Namibia</option>
+                                            <option value="Nauru">Nauru</option>
+                                            <option value="Nepal">Nepal</option>
+                                            <option value="Netherlands">Netherlands</option>
+                                            <option value="New Zealand">New Zealand</option>
+                                            <option value="Nicaragua">Nicaragua</option>
+                                            <option value="Niger">Niger</option>
+                                            <option value="Nigeria">Nigeria</option>
+                                            <option value="Norway">Norway</option>
+                                            <option value="Oman">Oman</option>
+                                            <option value="Pakistan">Pakistan</option>
+                                            <option value="Panama">Panama</option>
+                                            <option value="Papua New Guinea">Papua New Guinea</option>
+                                            <option value="Paraguay">Paraguay</option>
+                                            <option value="Peru">Peru</option>
+                                            <option value="Philippines">Philippines</option>
+                                            <option value="Poland">Poland</option>
+                                            <option value="Portugal">Portugal</option>
+                                            <option value="Qatar">Qatar</option>
+                                            <option value="Romania">Romania</option>
+                                            <option value="Russia">Russia</option>
+                                            <option value="Rwanda">Rwanda</option>
+                                            <option value="Samoa">Samoa</option>
+                                            <option value="San Marino">San Marino</option>
+                                            <option value=" Sao Tome"> Sao Tome</option>
+                                            <option value="Saudi Arabia">Saudi Arabia</option>
+                                            <option value="Senegal">Senegal</option>
+                                            <option value="Serbia and Montenegro">Serbia and Montenegro</option>
+                                            <option value="Seychelles">Seychelles</option>
+                                            <option value="Sierra Leone">Sierra Leone</option>
+                                            <option value="Singapore">Singapore</option>
+                                            <option value="Slovakia">Slovakia</option>
+                                            <option value="Slovenia">Slovenia</option>
+                                            <option value="Solomon Islands">Solomon Islands</option>
+                                            <option value="Somalia">Somalia</option>
+                                            <option value="South Africa">South Africa</option>
+                                            <option value="Spain">Spain</option>
+                                            <option value="Sri Lanka">Sri Lanka</option>
+                                            <option value="Sudan">Sudan</option>
+                                            <option value="Suriname">Suriname</option>
+                                            <option value="Swaziland">Swaziland</option>
+                                            <option value="Sweden">Sweden</option>
+                                            <option value="Switzerland">Switzerland</option>
+                                            <option value="Syria">Syria</option>
+                                            <option value="Taiwan">Taiwan</option>
+                                            <option value="Tajikistan">Tajikistan</option>
+                                            <option value="Tanzania">Tanzania</option>
+                                            <option value="Thailand">Thailand</option>
+                                            <option value="Togo">Togo</option>
+                                            <option value="Tonga">Tonga</option>
+                                            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                                            <option value="Tunisia">Tunisia</option>
+                                            <option value="Turkey">Turkey</option>
+                                            <option value="Turkmenistan">Turkmenistan</option>
+                                            <option value="Uganda">Uganda</option>
+                                            <option value="Ukraine">Ukraine</option>
+                                            <option value="United Arab Emirates">United Arab Emirates</option>
+                                            <option value="United Kingdom">United Kingdom</option>
+                                            <option value="United States">United States</option>
+                                            <option value="Uruguay">Uruguay</option>
+                                            <option value="Uzbekistan">Uzbekistan</option>
+                                            <option value="Vanuatu">Vanuatu</option>
+                                            <option value="Venezuela">Venezuela</option>
+                                            <option value="Vietnam">Vietnam</option>
+                                            <option value="Yemen">Yemen</option>
+                                            <option value="Zambia">Zambia</option>
+                                            <option value="Zimbabwe">Zimbabwe</option>
+                                        </select>
+                                        <div class="validate"></div>
+                                    </div>
+                                </div>
+                                <!-- MTCap library by default looks for a DIV of class='mtcaptcha' to place the captcha widget -->
+                                <div class="mtcaptcha" mtcapwid="mtcaptcha-1">
+                                    <iframe id="mtcaptcha-iframe-1"
+                                            style="display: inline-block; border: 0px; padding: 0px; margin: 0px; background: transparent; height: 179px;"
+                                            src="https://service.mtcaptcha.com/mtcv1/client/iframe.html?v=2024-03-24.15.25.36&amp;sitekey=MTPublic-DdbXPbOSB&amp;iframeId=mtcaptcha-iframe-1&amp;widgetSize=standard&amp;custom=false&amp;widgetInstance=mtcaptcha&amp;challengeType=standard&amp;theme=basic&amp;lang=en&amp;action=&amp;autoFadeOuterText=false&amp;host=https%3A%2F%2Fwww.safeaeon.com&amp;hostname=www.safeaeon.com&amp;serviceDomain=service.mtcaptcha.com&amp;textLength=0&amp;lowFrictionInvisible=&amp;enableMouseFlow=false"
+                                            title="mtcaptcha"
+                                            sandbox=" allow-forms allow-popups allow-same-origin allow-scripts allow-modals allow-popups-to-escape-sandbox"
+                                            width="100%" height="179px"></iframe>
+                                    <input type="hidden" class="mtcaptcha-verifiedtoken" name="mtcaptcha-verifiedtoken"
+                                           id="mtcaptcha-verifiedtoken-1" readonly="readonly" value=""></div>
+                                <div class="ContactBtn">
+                                    <button type="submit" name="submit_btn"
+                                            onclick="validateEmail(&quot;send&quot;,&quot;event&quot;,&quot;demo-form&quot;,&quot;request-a-demo&quot;,&quot;submit-demo-form&quot;)">
+                                        Submit
+                                    </button>
+                                </div>
+                                <input type="hidden" id="hidden_phone" name="hidden_phone"></form>
+                        </div>
+                    </div>
+                    <div class="col-xl-1 d-none d-xl-block"></div>
+                    <div class="col-lg-4 book text-center">
+                        <p><img alt="SafeAeon SOC-as-a-Service Datasheet" width="150px" height="200px" class="mw-100"
+                                src="../assets/img/datasheet/SOC_screenshot.jpg"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <section class="FAQ_SOC" id="FAQ_SOC">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions About SOC</h2>
+            </div>
+            <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingOne1">
+                        <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+                           aria-controls="collapseOne1">
+                            <h4 class="mb-0">What is SOC?<i class="fas fa-angle-down rotate-icon"></i></h4>
+                        </a>
+                    </div>
+                    <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                         data-parent="#accordionEx">
+                        <div class="card-body">A Security operations center is a 24x7 operation focused on remediating
+                            security threats. In today’s digital world, hackers are getting cleverer by every
+                            day. Therefore, SOC with cutting-edge technology needs to be leveraged by every company to
+                            detect, triage, and defect the security threats.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo2">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
+                           aria-expanded="false" aria-controls="collapseTwo2">
+                            <h4 class="mb-0">Does SafeAeon charge extra for onboarding &amp; transition?<i
+                                class="fas fa-angle-down rotate-icon"></i></h4>
+                        </a>
+                    </div>
+                    <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
+                         data-parent="#accordionEx">
+                        <div class="card-body">No, SafeAeon bundles all service aspects in monthly invoice, and there
+                            are no hidden charges.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingThree3">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3"
+                           aria-expanded="false" aria-controls="collapseThree3">
+                            <h4 class="mb-0">Inhouse Vs Outsourced SOC?<i class="fas fa-angle-down rotate-icon"></i>
+                            </h4>
+                        </a>
+                    </div>
+                    <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                         data-parent="#accordionEx">
+                        <div class="card-body">
+                            <a target="_blank" href="../assets/img/datasheet/SOC_whitepaper.pdf"
+                               aria-label="some more descriptive text that explains the link">Click here<span
+                                class="screen-reader-text">Details</span></a>to download the Whitepaper – “Why is it
+                            beneficial to Outsource the SOC than to build inhouse”
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingFour4">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseFour4"
+                           aria-expanded="false" aria-controls="collapseFour4">
+                            <h4 class="mb-0">Difference between SOC &amp; SIEM<i
+                                class="fas fa-angle-down rotate-icon"></i></h4>
+                        </a>
+                    </div>
+                    <div id="collapseFour4" class="collapse" role="tabpanel" aria-labelledby="headingFour4"
+                         data-parent="#accordionEx">
+                        <div class="card-body"><strong>Security information and event management (SIEM)</strong>collect
+                            and aggregate logs from all IT infrastructure in one place and analyze them
+                            against the Use Cases to detect malicious activities.<br><strong>Security Operation Centre
+                                (SOC)</strong>provides 24x7 monitoring of the environment leveraging SIEM solution
+                            where analysts triage each security alert for potential False Positive &amp; True Positive.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingFive5">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseFive5"
+                           aria-expanded="false" aria-controls="collapseFive5">
+                            <h4 class="mb-0">How many SIEM Use Cases &amp; SOC reports are part of SafeAeon SOC as a
+                                Service?<i class="fas fa-angle-down rotate-icon"></i></h4>
+                        </a>
+                    </div>
+                    <div id="collapseFive5" class="collapse" role="tabpanel" aria-labelledby="headingFive5"
+                         data-parent="#accordionEx">
+                        <div class="card-body">Customers can request any number of SIEM Use Cases and custom SOC reports
+                            during the service without paying anything extra.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services departments">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Do You Need Our Services</h2>
+                <p>SafeAeon's 24×7 SOC operates ceaselessly to watch over, identify, and counter cyber attacks, ensuring
+                    your business remains resilient and unharmed</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <img src="../assets/img/icon/Watchguard-icn.png" alt="Watchguard It Infrastructure">
+                        <h3>24/7 Eyes On Screen</h3>
+                        <p>Rest easy with SafeAeon's continuous vigilance for your IT infrastructure. Our dedicated
+                            security analysts ensure prompt threat detection and containment.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <img src="../assets/img/icon/Price-icn.png" alt="Cybersecurity Price">
+                        <h3>Unbeatable Prices</h3>
+                        <p>Access cutting-edge cybersecurity products through SafeAeon's unbeatable deals. Premium
+                            solutions at competitive prices for top-tier security.</p>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <img src="../assets/img/icon/Threat-Intelligence-icn.png" alt="Threat Intelligence">
+                        <h3>Threat Intelligence</h3>
+                        <p>Stay ahead with SafeAeon's researched Threat Intelligence Data. Clients enjoy free access for
+                            informed and proactive cybersecurity strategies.</p>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="icon-box">
+                        <img src="../assets/img/icon/IT-team-icn.png" alt="IT Team">
+                        <h3>Extended IT Team</h3>
+                        <p>Seamlessly integrate SafeAeon with your IT team. Strengthen controls against risks and
+                            threats with expert recommendations for unified security.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ContactSec" class="SOC ContactSec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 ContactSec_Text">
+                    <div class="section-title">
+                        <h2>Ready to take control of your Security?</h2>
+                        <h4>We are here to help</h4>
+                        <p>Reach out to schedule a demo with our team and learn how SafeAeon SOC-as-a-Service can
+                            benefit your organization</p>
+                    </div>
+
+                    <div class="ContactInfo"></div>
+                    <div class="DownloadFile">
+                        <a target="_blank" class="schedule_demo_btn" href="https://www.safeaeon.com/contact-us/"
+                           onclick="ga(&quot;send&quot;,&quot;event&quot;,&quot;meeting&quot;,&quot;btn-clicked&quot;,&quot;schedule-a-meeting&quot;)">Schedule
+                            a Meeting</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+<footer id="footer">
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-4 footer-contact">
+                    <a href="https://www.safeaeon.com/">
+                        <div class="footer-logo"><img src="https://www.safeaeon.com/assets/img/safeAeon_logo.png"
+                                                      alt="SafeAeon Logo" class="img-fluid" width="120" height="40">
+                        </div>
+                    </a>
+
+                    <div class="footer-contact-detail">
+
+                        <div id="main">
+                            <div class="container">
+
+                                <div class="resource_challenges-tabs">
+                                    <div class="tabs">
+                                        <input type="radio" name="tabs" id="tab1" checked="checked">
+                                        <label for="tab1"> HEADQUARTERS <i class="fa fa-caret-up"></i></label>
+                                        <div class="tab">
+                                            <p><a style="font-weight:500;font-size:14px;"
+                                                  href="https://g.page/SafeAeon">6701 Koll Center Parkway Suite 250
+                                                Pleasanton CA 94566 USA</a></p>
+                                        </div>
+
+                                        <input type="radio" name="tabs" id="tab2">
+                                        <label for="tab2"> North America <i class="fa fa-caret-up"></i></label>
+                                        <div class="tab">
+                                            <!--<p>301 W Main St Marshall, WI  53559 United States</p><br>-->
+                                            <p>106 Linkletter Avenue, Central Bedeque, Prince Edward Island, C0B 1G0</p>
+                                        </div>
+
+                                        <input type="radio" name="tabs" id="tab3">
+                                        <label for="tab3">ASIA <i class="fa fa-caret-up"></i></label>
+                                        <div class="tab">
+                                            <p>Quark City, Phase-VIII B , Mohali, Punjab, India</p>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="footerContact"><i class="fa fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:info@safeaeon.com"
+                               onclick="ga('send', 'event', 'email', 'clicked-on-email', 'info@safeaeon.com' , '10');">
+                                info@safeaeon.com</a>
+                        </p>
+                        <p class="footerContact"><i class="fa fa-phone fa-rotate-180"></i>
+                            <a href="tel:18556841313"
+                               onclick="ga('send', 'event', 'call', 'clicked-on-call', '18556841313');">1.855.684.1313</a>
+                        </p>
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-lg-5 col-md-8 footer-links">
+                    <span>Our Services</span>
+                    <ul>
+
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/soc-as-a-service/">SOC-as-a-Service</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/endpoint-detection-response-edr/">EDR-as-a-Service</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/multi-factor-authentication/">MFA-as-a-Service</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/mobile-device-management-service/">MDM-as-a-Service</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/va-as-a-service/">VA-as-a-Service</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/dark-web-monitoring/">Dark Web Monitoring</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/pentesting/">Pen Testing-as-a-Service</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/cloud-monitoring/">Cloud-App-Monitoring-as-a-Service</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/firewall/">Managed Next-Gen Firewall-as-a-Service</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/phishing-campaign-security-awareness-training/">Phishing
+                            Campaign &amp; Security Awareness Training</a></li>
+
+                    </ul>
+
+                    <ul>
+
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/managed-detection-and-response/">MDR-as-a-Service</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/xdr-extended-detection-and-response/">XDR-as-a-Service</a>
+                        </li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/patch-management/">Patch Management-as-a-Service</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/expertise-as-a-service/">Expertise-as-a-Service</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/email-security-as-a-service/">Email Security-as-a-Service</a>
+                        </li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/sase-as-a-service/">SASE-as-a-Service</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/dlp-as-a-service/">DLP-as-a-Service</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/digital-forensics-and-incident-response/">Digital Forensics
+                            and Incident Response</a></li>
+                        <li><i class="fa fa-angle-right" aria-hidden="true"></i> <a
+                            href="https://www.safeaeon.com/security-incident-and-crisis-support/">Security Incident And
+                            Crisis Support</a></li>
+
+
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 footer-newsletter">
+                    <div class="social-links text-center text-md-left pt-3 pt-md-0">
+                        <a href="https://x.com/safeaeon" target="_blank" class="twitter"
+                           aria-label="SafeAeon Twitter"><img
+                            src="https://www.safeaeon.com/assets/img/icon/twitter-icn.png" alt="SafeAeon-twitter"></a>
+                        <a href="https://www.facebook.com/SafeAeon/" target="_blank" class="facebook"
+                           aria-label="SafeAeon Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/safeaeon/" target="_blank" class="instagram"
+                           aria-label="SafeAeon Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/safeaeon" target="_blank" class="linkedin"
+                           aria-label="SafeAeon Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.pinterest.com/safeaeon/" target="_blank" class="twitter"
+                           aria-label="SafeAeon Twitter"><img
+                            src="https://www.safeaeon.com/assets/img/icon/pinterest-icn.png"
+                            alt="SafeAeon-pinterest"></a>
+                    </div>
+
+                    <span>Join Our Newsletter</span>
+                    <p style="color:#fff;">Subscribe to our Cyber Security Newsletter</p>
+                    <form id="myForm" action="https://www.safeaeon.com/phpmailer/newsletterMail" method="POST">
+                        <input type="hidden" name="CSRFToken" value="$token" aria-label="Search">
+                        <input type="email" name="email" aria-label="Email">
+                        <input type="submit" name="submit" value="Subscribe" aria-label="Button">
+                        <input type="hidden" id="hidden_phone" name="hidden_phone"></form>
+
+
+                    <div class="">
+                        <div class="footer review-Google">
+
+                            <a href="https://www.google.com/search?q=safeaeon&amp;ei=q6MbYYbnKf7C3LUPzdaTiAY&amp;gs_ssp=eJzj4tVP1zc0zDLLK84yKEoxYLRSNaiwMLBIS00xMLVITko2tEwytDKoMDYxMjZPNTayNDcxNjVNTfTiKE5MS01Mzc8DAETmEkM&amp;oq=Safe&amp;gs_lcp=Cgdnd3Mtd2l6EAMYADINCC4QxwEQrwEQQxCTAjIKCC4QxwEQowIQQzIHCAAQsQMQQzIHCAAQsQMQQzIHCAAQyQMQQzIECAAQQzIFCAAQgAQyCwgAEIAEELEDEIMBMggILhCABBCxAzIFCAAQgAQ6CAguELEDEIMBOgQILhBDOggIABCxAxCDAToICAAQgAQQsQM6CAgAEIAEEMkDOgUIABCSA0oECEEYAFDTG1j_IGClNGgAcAJ4AIAByQGIAd0FkgEFMC40LjGYAQCgAQHAAQE&amp;sclient=gws-wiz#lrd=0x808fed058cbc19b1:0x34237e32974355ea,1,,,"
+                               target="_blank" class="review-profile-details">
+                                <div class="review-icon"><img width="30px" height="30px"
+                                                              src="https://www.safeaeon.com/assets/img/google_logo_HP.png"
+                                                              alt="Google Icon"></div>
+                                <div class="review-text"> Reviews</div>
+                                <div class="review-stars">
+                                    <span class="review-rating">5.0</span>
+                                    <span class="review-star"><i class="fa fa-star"></i></span>
+                                    <span class="review-star"><i class="fa fa-star"></i></span>
+                                    <span class="review-star"><i class="fa fa-star"></i></span>
+                                    <span class="review-star"><i class="fa fa-star"></i></span>
+                                    <span class="review-star"><i class="fa fa-star"></i></span>
+                                </div>
+                            </a>
+                            <div class="footer_SOC2_Type2_logo">
+                                <img src="https://www.safeaeon.com/assets/img/soc-2-logo.png" alt="SOC2" width="90px"
+                                     height="100px">
+                                <img src="https://www.safeaeon.com/assets/img/ISO_27001_logo.png" alt="ISO27001"
+                                     width="105px" height="100px">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="copyright copyrightmobile">
+                        <strong><span>© 2024 SafeAeon</span></strong> Inc. All Rights Reserved.
+                        <div class="bottom-menu-link bottom-menu-mobile">
+                            <ul>
+                                <li><a href="https://www.safeaeon.com/sitemap.html">sitemap.html</a></li>
+                                <li><a href="https://www.safeaeon.com/sitemap.xml">sitemap.xml</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom col-lg-12">
+        <div class="container d-md-flex py-4">
+
+            <div style="text-align:center;margin:0 auto;" class="mr-md-auto text-center">
+                <div class="copyright copyrightDesktop">
+                    <strong><span>© 2024 SafeAeon</span></strong> Inc. All Rights Reserved.
+                </div>
+
+
+                <div class="bottom-menu-link bottom-menu-desktop">
+                    <ul>
+                        <li><a href="https://www.safeaeon.com/sitemap.html">sitemap.html</a></li>
+                        <li><a href="https://www.safeaeon.com/sitemap.xml">sitemap.xml</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--<div class="social-links text-center text-md-right pt-3 pt-md-0">
+              <a href="https://twitter.com/safeaeon" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.facebook.com/SafeAeon/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/safeaeon/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/safeaeon" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+            </div>-->
+        </div>
+    </div>
+</footer><!-- End Footer -->
+<script>
+    document.getElementById('emailForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent form from refreshing the page
+
+        const emailInput = document.getElementById('email');
+        const emailValue = emailInput.value;
+
+        // Display a message or perform any other actions
+        document.getElementById('message').innerText = `Email submitted: ${emailValue}`;
+
+        // Optionally clear the input field (if needed)
+        // emailInput.value = '';
+    });
+
+</script>
+
+
+<style>
+    #footer .social-links a {
+        background: #f58220;
+        border-radius: 6px;
+    }
+
+    .social-links {
+        margin-bottom: 20px;
+    }
+
+    .footerContact i.fa {
+        background: #f58220;
+        padding: 5px;
+        border-radius: 3px;
+        color: #fff;
+        margin-right: 5px;
+    }
+
+    .footerContact a {
+        color: #fff !important;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.6px;
+    }
+
+    .footer-contact ul {
+        padding: 0px;
+        list-style: none;
+        margin-top: 20px;
+    }
+
+    .footer-contact ul {
+        padding: 0px;
+        list-style: none;
+    }
+
+    .footer-contact li {
+        width: 100%;
+        float: left;
+    }
+
+    li.address_headquarters {
+        padding-right: 15px;
+    }
+
+    #footer strong {
+        font-weight: bolder;
+        font-size: 18px;
+        color: #f58220;
+    }
+
+    .footer-contact img {
+        width: 50%;
+    }
+
+    .footer-links h4 {
+        font-size: 20px !important;
+        color: #f58220 !important;
+        letter-spacing: 0.5px !important;
+        font-weight: bolder !important;
+    }
+
+    .bottom-menu-link ul {
+        display: inline-flex;
+        list-style: none;
+    }
+
+    .bottom-menu-link ul li {
+        padding: 0px 20px;
+        margin-top: 12px;
+        color: #fff;
+        display: block;
+    }
+
+    .footer.review-Google {
+        display: inline-block;
+    }
+
+    a.review-profile-details {
+        float: left;
+    }
+
+    span.review-star i.fa.fa-star {
+        font-size: 11px;
+    }
+
+    .footer_SOC2_Type2_logo {
+        float: right;
+        position: relative;
+        top: 24px;
+    }
+
+    .footer_SOC2_Type2_logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .review-icon img {
+        width: 130px !important;
+    }
+
+    .footer-contact::after, .footer-links::after, .footer-newsletter::after {
+        content: '';
+        position: absolute;
+        background-color: #fff;
+        width: 90%;
+        height: 3px;
+        left: 10px;
+        display: none;
+    }
+
+    .footer-contact::after, .footer-links::after {
+        bottom: -40px;
+    }
+
+    .footer-newsletter::after {
+        bottom: -10px;
+    }
+
+    .bottom-menu-link.bottom-menu-desktop {
+        display: block;
+    }
+
+    #footer .footer-top .footer-links ul a {
+        color: #fff;
+        left: 10px;
+        position: relative;
+        top: -2px;
+    }
+
+    #footer .footer-top .footer-contact p {
+        color: #fff;
+    }
+
+    .footer-top p a {
+        color: #fff;
+    }
+
+    #footer .footer-top {
+        background: rgb(10 28 49);
+        background: linear-gradient(360deg, rgb(0 21 46) 0%, rgb(18 54 94) 100%);
+
+    }
+
+    /*.footer-bottom {
+        background: rgb(55,102,156);
+        background: linear-gradient(360deg, rgb(0 21 46) 0%, rgb(8 48 94) 100%);
+    }*/
+
+    .footer-bottom.col-lg-12 {
+        background: #00152e;
+    }
+
+    .copyright {
+        color: #fff;
+    }
+
+    .footer-contact-detail ul {
+        float: left;
+        width: 50%;
+    }
+
+    .footer-contact li.address_Asia {
+        margin-top: 15px;
+    }
+
+    #footer .footer-top .footer-links ul i {
+        position: absolute !important;
+    }
+
+    #footer .footer-top .footer-links ul li {
+        display: inline-block !important;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .bottom-menu-link.bottom-menu-desktop {
+            display: none;
+        }
+
+        .bottom-menu-link.bottom-menu-mobile ul {
+            padding: 0px;
+            display: block;
+        }
+
+        .footer-contact::after, .footer-links::after, .footer-newsletter::after {
+            bottom: 0px;
+        }
+    }
+</style>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/counterup.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<nav class="mobile-nav d-lg-none">
+    <ul>
+        <li class="active"><a href="https://www.safeaeon.com/why-us/">Why SafeAeon</a></li>
+        <!--<li><a href="../redefiningsoc/">Redefining SOC Affordability</a></li>-->
+        <li class="drop-down"><a href="javascript:void()">Our As-a-Service Platforms <i class="fa fa-angle-down"
+                                                                                        aria-hidden="true"></i></a>
+            <ul>
+
+                <li style="height:98px;" class="service_coloum col-lg-3">
+                    <a href="../soc-as-a-service/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                           aria-hidden="true"></i>SOC-as-a-Service</a>
+                    <span class="sub-menu">
+						<p>SIEM Based 24x7 SOC Monitoring</p>
+					</span>
+
+
+                </li>
+
+                <li style="height:98px;" class="service_coloum col-lg-3">
+                    <a href="../managed-detection-and-response/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                                         aria-hidden="true"></i>MDR-as-a-Service</a>
+                    <span class="sub-menu">
+						<p>Managed Endpoint Detection &amp; Response</p>
+
+					</span>
+
+                </li>
+
+                <li style="height:98px;" class="service_coloum col-lg-3">
+                    <a href="../xdr-extended-detection-and-response/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                                              aria-hidden="true"></i>XDR-as-a-Service</a>
+                    <span class="sub-menu">
+						<p>Managed Extended Detection and Response</p>
+					</span>
+                </li>
+
+                <li style="height:98px;" class="service_coloum col-lg-3">
+                    <a href="../multi-factor-authentication/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                                      aria-hidden="true"></i>MFA-as-a-Service</a>
+                    <span class="sub-menu">
+						<p>Multi-Factor Authentication-as-a-Service</p>
+					</span>
+                </li>
+
+                <li style="height:98px;" class="service_coloum col-lg-3">
+                    <a href="../mobile-device-management-service/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                                           aria-hidden="true"></i>MDM-as-a-Service</a>
+                    <span class="sub-menu">
+						<p>Mobile Device Management-as-a-Service</p>
+					</span>
+                </li>
+
+                <li style="height:98px;" class="service_coloum col-lg-3">
+                    <a href="../va-as-a-service/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                          aria-hidden="true"></i>Vulnerability
+                        Assessment</a>
+                    <span class="sub-menu">
+						<p>Vulnerability Assessment-as-a-Service </p>
+					</span>
+
+                </li>
+
+                <li style="height:98px;" class="service_coloum col-lg-3">
+                    <a href="../dark-web-monitoring/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                              aria-hidden="true"></i>Dark Web Monitoring</a>
+                    <span class="sub-menu">
+						<p>Dark Web Monitoring-as-a-service </p>
+					</span>
+
+                </li>
+
+                <li style="height:98px;" class="service_coloum col-lg-3">
+                    <a href="../pentesting/" class="serviceTitle"><i class="fa fa-caret-right" aria-hidden="true"></i>Penetration
+                        Testing</a>
+                    <span class="sub-menu">
+						<p>Internal, External, Web App Pen Testing Services</p>
+					</span>
+
+                </li>
+
+                <li style="height:98px;" class="service_coloum col-lg-3">
+                    <a href="../patch-management/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                           aria-hidden="true"></i>Patch Management</a>
+                    <span class="sub-menu">
+						<p>Patch Management Services</p>
+					</span>
+                </li>
+
+                <li style="height:98px;" class="service_coloum col-lg-3">
+                    <a href="../expertise-as-a-service/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                                 aria-hidden="true"></i>Expertise-as-a-Service</a>
+                    <span class="sub-menu">
+						<p>SafeAeon Expertise-as-a-Service</p>
+					</span>
+                </li>
+
+                <li style="height:98px;" class="service_coloum col-lg-3">
+                    <a href="../email-security-as-a-service/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                                      aria-hidden="true"></i>Email
+                        Security-as-a-Service</a>
+                    <span class="sub-menu">
+						<p>SafeAeon Email Security-as-a-Service</p>
+					</span>
+
+                </li>
+                <li style="height:98px;" class="service_coloum col-lg-3">
+                    <a href="../sase-as-a-service/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                            aria-hidden="true"></i>SASE-as-a-Service</a>
+                    <span class="sub-menu">
+						<p>SafeAeon Secure Access Service Edge</p>
+					</span>
+
+                </li>
+
+                <li style="height:98px;" class="service_coloum col-lg-3">
+                    <a href="../phishing-campaign-security-awareness-training/" class="serviceTitle"><i
+                        class="fa fa-caret-right" aria-hidden="true"></i>Phishing Campaign &amp; Security Awareness
+                        Training</a>
+                    <span class="sub-menu">
+						<p>SafeAeon Security Awareness Training</p>
+					</span>
+
+                </li>
+
+                <li style="height:98px;" class="service_coloum col-lg-3">
+                    <a href="../digital-forensics-and-incident-response/" class="serviceTitle"><i
+                        class="fa fa-caret-right" aria-hidden="true"></i>Digital Forensics and Incident Response (DF/IR)</a>
+                    <span class="sub-menu">
+						<p>Comprehensive Incident Response Services</p>
+					</span>
+                </li>
+
+
+                <li style="height:98px;" class="service_coloum col-lg-3">
+                    <a href="../cloud-monitoring/" class="serviceTitle"><i class="fa fa-caret-right"
+                                                                           aria-hidden="true"></i>Cloud App
+                        Monitoring</a>
+                    <span class="sub-menu">
+						<p>Cloud App Monitoring</p>
+						<p>Cloud Infrastructure Monitoring</p>
+					</span>
+
+
+                </li>
+
+                <li style="height:98px;" class="service_coloum col-lg-3">
+                    <a href="../firewall/" class="serviceTitle"><i class="fa fa-caret-right" aria-hidden="true"></i>Managed
+                        Next-Gen Firewall</a>
+                    <span class="sub-menu">
+						<p>Firewall Management &amp; Monitoring Service</p>
+					</span>
+
+                </li>
+
+
+            </ul>
+        </li>
+        <li><a href="../msp-partner/">MSP Partner</a></li>
+        <li class="drop-down desktop-show"><a href="https://www.safeaeon.com/resources/">Resources <i
+            class="fa fa-angle-down" aria-hidden="true"></i></a>
+            <ul class="dropdown-menu resources_menu">
+                <li><a href="../blog/">Blog</a></li>
+                <li><a href="https://www.safeaeon.com/resources/whitepaper/">Whitepapers</a></li>
+                <li><a href="https://www.safeaeon.com/resources/datasheets/">Datasheets</a></li>
+                <li><a href="https://www.safeaeon.com/resources/infographics/">Infographics</a></li>
+                <li><a href="https://www.safeaeon.com/resources/webinars/">Webinars</a></li>
+                <li><a href="https://www.safeaeon.com/resources/press-releases/">Press Releases</a></li>
+                <li><a href="https://www.safeaeon.com/events-gallery/">Event Gallery</a></li>
+            </ul>
+        </li>
+        <li class="mobile-show"><a href="https://www.safeaeon.com/resources/">Resources <i class="fa fa-angle-down"
+                                                                                           aria-hidden="true"></i></a>
+        </li>
+        <li class="mobile-show"><a href="../blog/">Blog</a></li>
+        <li class="mobile-show"><a href="https://www.safeaeon.com/resources/whitepaper/">Whitepapers</a></li>
+        <li class="mobile-show"><a href="https://www.safeaeon.com/resources/datasheets/">Datasheets</a></li>
+        <li class="mobile-show"><a href="https://www.safeaeon.com/resources/infographics/">Infographics</a></li>
+        <li class="mobile-show"><a href="https://www.safeaeon.com/resources/webinars/">Webinars</a></li>
+        <li class="mobile-show"><a href="https://www.safeaeon.com/resources/press-releases/">Press Releases</a></li>
+        <li class="mobile-show"><a href="https://www.safeaeon.com/events-gallery/">Event Gallery</a></li>
+        <!--<li><a href="../press-releases/SafeAeon-partners-with-blackBerry-to-strengthen-cybersecurity-offering-worldwide/">New Release</a></li>-->
+        <li><a href="../career/">Careers</a></li>
+        <li><a href="https://www.safeaeon.com/contact-us/"
+               onclick="ga('send', 'event', 'contact-us', 'open-contact-form', 'contact-page');"> Contact Us</a></li>
+        <li><a class="appointment-btn" href="https://www.safeaeon.com/request-a-demo/"
+               onclick="ga('send', 'event', 'demo', 'open-demo-form', 'request-a-demo');"> Request a Demo</a></li>
+    </ul>
+</nav>
+<div class="mobile-nav-overly"></div>
+<iframe allow="join-ad-interest-group" data-tagging-id="AW-11405511181" data-load-time="1725382907609" height="0"
+        width="0"
+        src="https://td.doubleclick.net/td/rul/11405511181?random=1725382907601&amp;cv=11&amp;fst=1725382907601&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45je48s0v881528113za200&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=0&amp;u_w=1680&amp;u_h=1050&amp;url=https%3A%2F%2Fwww.safeaeon.com%2Fsoc-as-a-service%2F&amp;ref=https%3A%2F%2Fwww.safeaeon.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=SOC-as-a-Service%20Provider%20%7C%2024x7%20Security%20Operations%20Center&amp;npa=0&amp;pscdl=noapi&amp;auid=1988326990.1725371232&amp;fledge=1&amp;data=event%3Dgtag.config"
+        style="display: none; visibility: hidden;"></iframe>
+<script src="../assets/js/intlTelInput-jquery.min.js"></script>
+
+<script>
+    $(function () {
+        var code = ""; // Assigning value from model.
+        $('#phone').val(code);
+        var iti = $('#phone').intlTelInput({
+            autoHideDialCode: true,
+            autoPlaceholder: "ON",
+            dropdownContainer: document.body,
+            formatOnDisplay: true,
+            initialCountry: "us",
+            placeholderNumberType: "MOBILE",
+            preferredCountries: ['us', 'gb', 'in'],
+            separateDialCode: true
+        });
+
+        // Hidden input to store the full number
+        $('<input>').attr({
+            type: 'hidden',
+            id: 'hidden_phone',
+            name: 'hidden_phone'
+        }).appendTo('form');
+
+        // Event listener for country change
+        $('#phone').on('countrychange', function (e, countryData) {
+            // Alert the selected country code
+            var countryCode = iti.intlTelInput("getSelectedCountryData").dialCode;
+            $('#hidden_phone').val(countryCode);
+        });
+
+    });
+</script>
+
+
+<script>
+    var mtcaptchaConfig = {
+        "sitekey": "MTPublic-DdbXPbOSB",
+        "autoFormValidate": true
+    };
+    (function () {
+        var mt_service = document.createElement('script');
+        mt_service.async = true;
+        mt_service.src = 'https://service.mtcaptcha.com/mtcv1/client/mtcaptcha.min.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(mt_service);
+        var mt_service2 = document.createElement('script');
+        mt_service2.async = true;
+        mt_service2.src = 'https://service2.mtcaptcha.com/mtcv1/client/mtcaptcha2.min.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(mt_service2);
+    })();
+</script>
+
+<script>"use strict";
+window.addEventListener("scroll", (() => {
+    setTimeout((() => {
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"], t.factory = function (e) {
+                    return function () {
+                        var n = Array.prototype.slice.call(arguments);
+                        return n.unshift(e), t.push(n), t
+                    }
+                }, t.methods.forEach((function (e) {
+                    t[e] = t.factory(e)
+                })), t.load = function (t) {
+                    var e = 3e5, n = Math.ceil(new Date / e) * e, o = document.createElement("script");
+                    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                    var r = document.getElementsByTagName("script")[0];
+                    r.parentNode.insertBefore(o, r)
+                }
+            }
+        }(), drift.SNIPPET_VERSION = "0.3.1", drift.load("4fu8s9z9krrd")
+    }), 1e3)
+}), {once: !0})</script>
+<script>
+    var select = document.getElementById("Country");
+
+    var countries = new Array("Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antarctica", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burma", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo, Democratic Republic", "Congo, Republic of the", "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Greenland", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea, North", "Korea, South", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Mongolia", "Morocco", "Monaco", "Mozambique", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Samoa", "San Marino", " Sao Tome", "Saudi Arabia", "Senegal", "Serbia and Montenegro", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "Spain", "Sri Lanka", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe");
+
+    //console.log(countries);
+    //console.log(select);
+
+    for (var i = 0; i < countries.length; i++) {
+
+        var option = document.createElement("option");
+        //for every turn of the loop create an option tag
+        //console.log(option);
+        var txt = document.createTextNode(countries[i]);
+        //for every turn of the loop create the inner text
+        //console.log(txt);
+        option.appendChild(txt);
+        //for every turn of the loop put the words from txt inside the <option> tags
+        //console.log(option);
+        option.setAttribute("value", countries[i]); //for every turn of the loop set the value attribute to corresponding country name
+        //console.log(option);
+        select.insertBefore(option, select.lastChild);
+        //console.log(select);
+
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        //console.log('DOM fully loaded and parsed');
+        document.querySelector('select[name="Country"]').onchange = alertCountry;
+    }, false);
+
+    function alertCountry(event) {
+        //console.log('DOM loaded');
+        //use "this" to refer to selected element
+        if (!event.target.value) alert('Please select a country');
+        else alert('');
+    }
+</script>
+<script defer=""
+        src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+        integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+        data-cf-beacon="{&quot;rayId&quot;:&quot;8bd74d88ddeb90ab&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfL4&quot;:true}},&quot;version&quot;:&quot;2024.8.0&quot;,&quot;token&quot;:&quot;bef934edf1094e95bd888999aa4cf717&quot;}"
+        crossorigin="anonymous"></script>
+
+
+<div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb">
+    <section id="shadow-host-companion"></section>
+</div>
+<div id="drift-frame-chat"
+     class="drift-conductor-item drift-frame-chat drift-frame-chat-align-right with-transition drift-has-chat"
+     style="right: 12px; width: 400px !important; max-width: none; position: fixed; z-index: 2147483647; max-height: 0px; bottom: 88px; visibility: hidden; min-width: 320px; height: 100% !important; opacity: 0;"
+     aria-hidden="true" tabindex="-1">
+    <iframe class="drift-frame-chat" scrolling="no" title="Drift Widget Chat Window"
+            allow="autoplay; encrypted-media; fullscreen;" frameborder="0"
+            src="https://js.driftt.com/core/chat?d=1&amp;region=US&amp;driftEnableLog=false&amp;pageLoadStartTime=1725382906366"
+            style="background: transparent; width: 400px !important; max-width: 100%; height: 100%; border: none;"
+            aria-hidden="true" tabindex="-1"></iframe>
+</div>
+<div id="drift-frame-controller"
+     class="drift-conductor-item drift-frame-controller drift-frame-controller-align-right drift-has-chat"
+     style="right: 24px; width: 360px; max-width: none; position: fixed; z-index: 2147483647; height: 120px; bottom: 24px;">
+    <iframe class="drift-frame-controller" scrolling="no" title="Drift Widget Chat Controller"
+            allow="autoplay; encrypted-media; fullscreen;" frameborder="0"
+            src="https://js.driftt.com/core?d=1&amp;embedId=4fu8s9z9krrd&amp;eId=4fu8s9z9krrd&amp;region=US&amp;forceShow=false&amp;skipCampaigns=false&amp;sessionId=9e37e046-3e4b-42c7-b9b1-457f717df31f&amp;sessionStarted=1725382920.635&amp;campaignRefreshToken=b2df57ac-b714-479f-9d8b-470a576bcc3d&amp;hideController=false&amp;pageLoadStartTime=1725382906366&amp;mode=CHAT&amp;driftEnableLog=false&amp;secureIframe=false&amp;u=https%3A%2F%2Fwww.safeaeon.com%2Fsoc-as-a-service%2F"
+            style="background: transparent; width: 360px; max-width: 100%; height: 120px; border: none;"></iframe>
+</div>
+<script type="text/javascript" async="" src="https://js.zi-scripts.com/zi-tag.js"></script>
+<iframe allow="join-ad-interest-group" data-tagging-id="G-622G925DX3" data-load-time="1725382955460" height="0"
+        width="0"
+        src="https://td.doubleclick.net/td/ga/rul?tid=G-622G925DX3&amp;gacid=683570755.1725371232&amp;gtm=45je48s0v881528113za200&amp;dma=0&amp;gcd=13l3l3l3l1l1&amp;npa=0&amp;pscdl=noapi&amp;aip=1&amp;fledge=1&amp;frm=0&amp;tag_exp=0&amp;z=964899455"
+        style="display: none; visibility: hidden;"></iframe>
+<iframe allow="join-ad-interest-group" data-tagging-id="AW-11405511181" data-load-time="1725382955479" height="0"
+        width="0"
+        src="https://td.doubleclick.net/td/rul/11405511181?random=1725382955464&amp;cv=11&amp;fst=1725382955464&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45je48s0v881528113za200&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=0&amp;u_w=1680&amp;u_h=1050&amp;url=https%3A%2F%2Fwww.safeaeon.com%2Fsoc-as-a-service%2F&amp;ref=https%3A%2F%2Fwww.safeaeon.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=SOC-as-a-Service%20Provider%20%7C%2024x7%20Security%20Operations%20Center&amp;npa=0&amp;pscdl=noapi&amp;auid=1988326990.1725371232&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B128.0.6613.114%7CNot%253BA%253DBrand%3B24.0.0.0%7CGoogle%2520Chrome%3B128.0.6613.114&amp;uamb=0&amp;uam=&amp;uap=macOS&amp;uapv=13.6.8&amp;uaw=0&amp;fledge=1&amp;data=event%3DPlaybook%20Fired%3Bevent_category%3DDrift%20Widget%3Bevent_label%3DPlaybook%20ID%3A%201916996%3Bnon_interaction%3Dtrue"
+        style="display: none; visibility: hidden;"></iframe>
+<script type="text/javascript" charset="utf-8" async=""
+        src="blob:https://www.safeaeon.com/4f0d4fcf-14e3-4569-bbcb-8b046ddec8fd"></script>
+</body>
